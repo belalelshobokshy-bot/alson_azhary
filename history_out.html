@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" id="main-html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-ar="تاريخ مدرسة الألسن الأزهري" data-en="Al-Alson Azhari School History">تاريخ مدرسة الألسن الأزهري</title>
+    <link rel="icon" href="logo.png" >
+    <style>
+        :root {
+            --dark-blue: #03045E;
+            --ocean-blue: #0077B6;
+            --sky-blue: #00B4D8;
+            --white-blue: #CAF0F8;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin:0;
+            background-color: var(--white-blue);
+            color: var(--dark-blue);
+            line-height: 1.6;
+        }
+
+        nav {
+            background: var(--dark-blue);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 15px;
+            transition: 0.3s;
+            text-decoration: none;
+
+        }
+        .nav-links a:hover {
+    color: var(--sky-blue);
+}
+        
+
+        .lang-btn {
+            background: var(--sky-blue);
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        /* الهيدر المدمج مع الصورة */
+        header {
+            position: relative;
+            background-color: var(--dark-blue);
+            background-image: linear-gradient(135deg, rgba(3, 4, 94, 0.8), rgba(0, 119, 182, 0.8)), url('alson.png');
+            background-blend-mode: overlay; /* يدمج الصورة مع اللون */
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            color: white;
+            padding: 70px 20px;
+            text-align: center;
+        }
+        h1{
+            margin-top: 0px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: -50px auto 30px; /* تداخل بسيط مع الهيدر */
+            z-index: 5;
+            position: relative;
+        }
+
+        .info-section {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+            margin-bottom: 25px;
+        }
+
+        .grid-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            border-right: 5px solid var(--ocean-blue);
+        }
+
+        h2, h3 { color: var(--ocean-blue); }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: var(--dark-blue);
+            color: white;
+        }
+
+        ul { padding-right: 20px; }
+        @media (max-width: 400px) {
+    .grid-info {
+        grid-template-columns: 1fr; /* بطاقة واحدة لكل سطر */
+        gap: 15px;
+    }
+
+    .card, .info-section {
+        padding: 15px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 5%;
+    }
+
+    .nav-links a {
+        margin: 5px 0;
+    }
+
+    .lang-btn {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    header {
+        padding: 50px 10px;
+    }
+
+    header h1 { font-size: 1.3rem; }
+    header p { font-size: 0.85rem; }
+}
+/* على الموبايلات الصغيرة */
+@media (max-width: 480px) {
+    .nav-links {
+        display: flex;
+        flex-direction: row; /* تخلي الروابط عمودية */
+        gap: 10px; /* مسافة بين كل رابط */
+        align-items: flex-start; /* تحاذي links على الشمال في العربية */
+    }
+
+    .nav-links a {
+        margin: 5px 0; /* مسافة رأسية إضافية بين الروابط */
+        font-size: 1rem; /* حجم الخط مناسب للموبايل */
+    }
+
+    nav {
+        padding: 15px 5%;
+    }
+}
+/* الناف بار على الموبايل */
+@media (max-width: 480px) {
+    nav {
+        padding: 10px 5%;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-wrap: nowrap; /* اجعل الروابط في سطر واحد */
+        gap: 20px; /* مسافة بين الروابط */
+        overflow-x: auto; /* لو زاد عدد الروابط يظهر scroll أفقي */
+    }
+
+    .nav-links a {
+        font-size: 0.9rem; /* تصغير الخط قليلاً ليلائم الموبايل */
+        white-space: nowrap; /* تمنع كسر الكلمة أو السطر */
+    }
+
+    .lang-btn {
+        padding: 6px 15px; /* تقليل حجم الزر */
+        font-size: 0.85rem; /* تصغير الخط داخل الزر */
+        flex-shrink: 0; /* تمنع الزر من الانكماش */
+    }
+
+    nav {
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+
+.main-footer {
+            background: var(--dark-blue);
+            color: white;
+            padding: 60px 10% 20px;
+            margin-top: 50px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 40px;
+        }
+
+        .footer-section h4 {
+            color: var(--sky-blue);
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .footer-section h4::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            right: 0;
+            width: 40px;
+            height: 2px;
+            background: var(--sky-blue);
+        }
+
+        [lang="en"] .footer-section h4::after { right: auto; left: 0; }
+
+        .footer-section ul { list-style: none; padding: 0; }
+        .footer-section ul li { margin-bottom: 12px; }
+        .footer-section ul li a { color: #ccc; text-decoration: none; transition: 0.3s; }
+        .footer-section ul li a:hover { color: white; padding-inline-start: 10px; }
+
+        .contact-info-footer p { margin: 15px 0; color: #ccc; display: flex; align-items: center; gap: 10px; }
+        .contact-info-footer a { color: #ccc; text-decoration: none; }
+
+        .copyright {
+            text-align: center;
+            padding-top: 25px;
+            font-size: 0.9rem;
+            color: #888;
+        }
+
+        /* أيقونة واتساب عائمة */
+       .whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+    left: 20px; /* تم وضعه جهة اليسار لعدم حجب الكلام في العربية */
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    background-color: #1ca74f;
+    box-shadow: 2px 5px 15px rgba(0,0,0,0.3);
+}
+
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-links">
+        <a href="index.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+        <a href="contact_out.html" data-ar="تواصل" data-en="Home">تواصل معنا</a>
+    </div>
+    <button class="lang-btn" onclick="toggleLang()" id="btn-text">English</button>
+</nav>
+
+<header>
+    <h1 data-ar="مسيرة الألسن الأزهرية" data-en="Al-Alson Azhari Journey">مسيرة الألسن الأزهرية</h1>
+    <p data-ar="عراقة المنهج الأزهري.. وطموح اللغات العالمي" data-en="Authentic Azhari Heritage.. Global Language Ambition"></p>
+</header>
+
+<div class="container">
+    <div class="info-section">
+        <h2 data-ar="عن المدرسة" data-en="About the School">عن المدرسة</h2>
+        <p data-ar="تأسست المدرسة في العام الدراسي 2018–2019 لتكون صرحاً يجمع بين العلوم الشرعية واللغات (الإنجليزية، الفرنسية، والألمانية). اختيار اسم 'الألسن' يعكس اهتمامنا ببناء جسور التواصل الثقافي." 
+           data-en="The school was founded in 2018–2019 to be an edifice combining Sharia sciences and modern languages. The name 'Al-Alson' reflects our commitment to cultural communication."></p>
+    </div>
+
+    <div class="grid-info">
+        <div class="card">
+            <h3 data-ar="📍 الموقع" data-en="📍 Location">📍 الموقع</h3>
+            <p data-ar="39 شارع علي فهمي – نزلة البطران – المريوطية – الهرم – الجيزة." 
+               data-en="39 Ali Fahmy St – Nazlet El Batran – Marioutia – Haram – Giza."></p>
+        </div>
+
+        <div class="card">
+            <h3 data-ar="🎓 المراحل التعليمية" data-en="🎓 Academic Stages">🎓 المراحل التعليمية</h3>
+            <p data-ar="من التمهيدي (KG) حتى الإعدادية والثانوية، مع تدريس اللغة الثانية من KG1." 
+               data-en="From Preschool (KG) to Secondary, teaching the second language from KG1."></p>
+        </div>
+
+        <div class="card">
+            <h3 data-ar="📖 المنهج" data-en="📖 Curriculum">📖 المنهج</h3>
+            <p data-ar="منهج لغات متكامل + تحفيظ القرآن الكريم ودروس أخلاقية." 
+               data-en="Integrated language curriculum + Quran memorization and ethics lessons."></p>
+        </div>
+    </div>
+
+    <div class="info-section" style="margin-top: 25px;">
+        <h2 data-ar="لماذا نحن؟" data-en="Why Us?">لماذا نحن؟</h2>
+        <ul>
+            <li data-ar="دمج التعليم الأزهري مع أحدث أنظمة اللغات." data-en="Integrating Azhari education with modern language systems."></li>
+            <li data-ar="بيئة تعليمية مجهزة تقنياً ورياضياً." data-en="Technologically and athletically equipped environment."></li>
+            <li data-ar="التركيز على القيم الأخلاقية والصدق في التعامل." data-en="Emphasis on moral values and honesty."></li>
+        </ul>
+    </div>
+</div>
+
+<footer class="main-footer">
+    <div class="footer-container">
+        <div class="footer-section">
+            <h4 data-ar="مدرسة الألسن" data-en="Al-Alson School">مدرسة الألسن</h4>
+            <p data-ar="نحن نلتزم بتقديم تعليم أزهري لغات متميز يجمع بين الأصالة والحداثة في بيئة تربوية آمنة." 
+               data-en="We are committed to providing distinguished Azhari language education in a safe environment."></p>
+        </div>
+
+        <div class="footer-section">
+            <h4 data-ar="روابط سريعة" data-en="Quick Links">روابط سريعة</h4>
+            <ul>
+                <li><a href="Landing_Page_azhar.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a></li>
+                
+            </ul>
+        </div>
+
+        <div class="footer-section contact-info-footer">
+            <h4 data-ar="تواصل مباشر" data-en="Direct Contact">تواصل مباشر</h4>
+            <p>📍 <span data-ar="39 شارع علي فهمي – المريوطية – الهرم" data-en="39 Ali Fahmy St – Marioutia – Haram"></span></p>
+            <p>📞 <a href="tel:+201003388140">01003388140</a></p>
+            <p>📧 hr.alalsonazharils@gmail.com</p>
+        </div>
+
+    </div>
+
+
+    <a href="https://wa.me/201234567890" class="whatsapp-float" target="_blank">
+    <svg width="35" height="35" fill="currentColor" viewBox="0 0 16 16">
+        <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.06 3.973L0 16l4.135-1.086c1.17.637 2.483.974 3.823.974h.004c4.368 0 7.926-3.558 7.93-7.926a7.898 7.898 0 0 0-2.326-5.602zM7.994 14.52a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.17-.478 1.335-0.94.165-.46.165-.856.115-.94-.05-.084-.183-.133-.38-.232z"/>
+    </svg>
+</a>
+
+
+
+    <div class="copyright">
+        <p data-ar="&copy; 2030 مدرسة الألسن الأزهري - جميع الحقوق محفوظة" 
+           data-en="&copy; 2030 Al-Alson Azhari School - All Rights Reserved"></p>
+    </div>
+</footer>
+
+<script>
+    function updateLang() {
+        const html = document.getElementById('main-html');
+        const lang = html.getAttribute('lang');
+        const elements = document.querySelectorAll('[data-ar], [data-en]');
+
+        elements.forEach(el => {
+            el.innerText = lang === 'ar' ? el.getAttribute('data-ar') : el.getAttribute('data-en');
+        });
+    }
+
+    function toggleLang() {
+        const html = document.getElementById('main-html');
+        const btn = document.getElementById('btn-text');
+
+        if(html.getAttribute('lang') === 'ar') {
+            html.setAttribute('lang', 'en');
+            html.setAttribute('dir', 'ltr');
+            btn.innerText = 'العربية';
+        } else {
+            html.setAttribute('lang', 'ar');
+            html.setAttribute('dir', 'rtl');
+            btn.innerText = 'English';
+        }
+        updateLang();
+    }
+    window.onload = updateLang;
+</script>
+
+</body>
+</html>
